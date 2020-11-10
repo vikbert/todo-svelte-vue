@@ -1,13 +1,14 @@
 <script>
-  import Logo from './Logo.svelte';
-
   import TodoService, { Todo } from '../services/TodoService';
-  const service = new TodoService([new Todo('f'), new Todo('b')]);
+
+  const service = new TodoService([
+    new Todo('clean the room'),
+    new Todo('programming'),
+  ]);
   let todos = service.list();
   console.table(todos);
 </script>
 
-<Logo />
 <section class="todoapp">
   <header class="header">
     <h1>todos svelte</h1>

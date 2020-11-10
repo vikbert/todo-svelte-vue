@@ -1,6 +1,20 @@
 <script>
+import TodoService, { Todo } from '../services/TodoService';
 export default {
   name: 'TodoApp',
+  data() {
+    return {
+      todos: [],
+    };
+  },
+  created() {
+    const service = new TodoService([
+      new Todo('clean the room'),
+      new Todo('programming'),
+    ]);
+    this.todos = service.list();
+    console.table(this.todos);
+  },
 };
 </script>
 
