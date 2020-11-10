@@ -1,21 +1,12 @@
 <script>
-  import Hello from './Hello.svelte';
-
-  export let message = 'Svelte 3';
+  import Logo from './Logo.svelte';
 </script>
 
-<style>
-  h3 {
-    color: grey;
-    text-transform: capitalize;
-  }
-</style>
-
-<Hello />
+<Logo />
 <section class="todoapp">
   <header class="header">
-    <h1>todos</h1>
-    <input class="new-todo" placeholder="What needs to be done?" autofocus />
+    <h1>todos svelte</h1>
+    <input class="new-todo" placeholder="What needs to be done?" />
   </header>
 
   <section class="main">

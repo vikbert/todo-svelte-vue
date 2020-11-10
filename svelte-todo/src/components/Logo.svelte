@@ -1,10 +1,10 @@
 <script>
-  let logo = './assets/logo.png';
+  let logo = './logo.png';
 </script>
 
 <style>
   img {
-    width: 90px;
+    width: 50px;
     margin-top: 20px;
   }
 </style>
