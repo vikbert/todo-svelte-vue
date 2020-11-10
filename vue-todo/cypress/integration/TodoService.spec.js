@@ -1,4 +1,4 @@
-import { Todo, TodoService } from '../../src/services/TodoService';
+import TodoService, { Todo } from '../../src/services/TodoService';
 
 describe('todoService', () => {
   it('can count the list', () => {

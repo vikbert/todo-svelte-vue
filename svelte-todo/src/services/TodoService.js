@@ -1,12 +1,8 @@
-class Todo {
+export class Todo {
   constructor(title, id) {
     this.title = title;
     this.completed = false;
-    this.id = id
-      ? id
-      : Math.random()
-          .toString(36)
-          .substr(2, 9);
+    this.id = id ? id : Math.random().toString(36).substr(2, 9);
   }
 }
 
@@ -28,13 +24,13 @@ class TodoService {
   }
 
   delete(targetId) {
-    this.todos = this.todos.filter(item => {
+    this.todos = this.todos.filter((item) => {
       return item.id !== targetId;
     });
   }
 
   complete(targetId) {
-    this.todos.map(item => {
+    this.todos.map((item) => {
       if (item.id === targetId) {
         item.completed = true;
       }
@@ -42,22 +38,22 @@ class TodoService {
   }
 
   clearCompleted() {
-    this.todos = this.todos.filter(item => {
+    this.todos = this.todos.filter((item) => {
       return !item.completed;
     });
   }
 
   getActive() {
-    return this.todos.filter(item => {
+    return this.todos.filter((item) => {
       return !item.completed;
     });
   }
 
   getCompleted() {
-    return this.todos.filter(item => {
+    return this.todos.filter((item) => {
       return item.completed;
     });
   }
 }
 
-export default { Todo, TodoService };
+export default TodoService;
