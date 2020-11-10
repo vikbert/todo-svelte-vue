@@ -1,18 +1,6 @@
 <script>
-import TodoService, { Todo } from '../services/TodoService';
-
 export default {
   name: 'TodoApp',
-  data() {
-    return {
-      todos: [],
-    };
-  },
-  created() {
-    const service = new TodoService([new Todo('f'), new Todo('b')]);
-    let todos = service.list();
-    console.table(todos);
-  },
 };
 </script>
 
