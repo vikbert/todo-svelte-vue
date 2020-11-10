@@ -4,4 +4,6 @@ export default {
 };
 </script>
 
-<template>hello, world</template>
+<template>
+  <span> hello, world</span>
+</template>
